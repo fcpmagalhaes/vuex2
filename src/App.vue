@@ -30,17 +30,10 @@ export default {
     }, 3000);
   },
   computed: {
-    ...mapState({
-      // mapState é um metodo helper que permite acessar o state sem this.$store
-      user: state => {
-        const { name, email } = state.user;
-        return `O usuário logado é ${name} e possui o email ${email}.`;
-      }
-    })
-    // user() {
-    //   const { name, email } = this.$store.state.user;
-    //   return `O usuário logado é ${name} e possui o email ${email}.`;
-    // }
+    user() {
+      const { name, email } = this.$store.state.user;
+      return `O usuário logado é ${name} e possui o email ${email}.`;
+    }
   }
 };
 </script>
